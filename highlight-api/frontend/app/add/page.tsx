@@ -30,7 +30,10 @@ export default function NewHighlightPage() {
         try {
             const res = await fetch("https://deploy.egeuysal.com/highlight", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${process.env.NEXT_PUBLIC_HIGHLIGHT_API_KEY}`
+                },
                 body: JSON.stringify(payload)
             })
 
