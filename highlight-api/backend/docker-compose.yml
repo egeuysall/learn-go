@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  highlight-api:
+    build: .
+    container_name: highlight-api
+    ports:
+      - "8080:8080"  # Exposes port 8080 on the host
+    restart: always  # Ensures the container restarts automatically on failure or server reboot
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge  # Using bridge networking to allow the containers to communicate within this network

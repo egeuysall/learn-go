@@ -1,3 +1,3 @@
 module highlight-api
 
-go 1.24.3
+go 1.19
