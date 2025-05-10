@@ -3,7 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/joho/godotenv"
 	"net/http"
+	"os"
 )
 
 type Highlight struct {
@@ -71,6 +73,13 @@ func handleHighlight(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	token := r.Header.Get("Authorization")
+	expectedToken := "Bearer " + os.Getenv("NEXT_PUBLIC_HIGHLIGHT_API_KEY")
+	if token != expectedToken && r.Method == http.MethodPost {
+		http.Error(w, "Unauthorized", http.StatusUnauthorized)
+		return
+	}
+
 	if r.Method == http.MethodPost {
 		var newHighlight Highlight
 
@@ -108,11 +117,16 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	err := godotenv.Load(".env.local")
+	if err != nil {
+		fmt.Println("Error loading .env.local file")
+	}
+
 	http.HandleFunc("/", handleRoot)
 	http.HandleFunc("/highlight", handleHighlight)
 
 	fmt.Println("Server is running on http://localhost:8080")
-	err := http.ListenAndServe(":8080", nil)
+	err = http.ListenAndServe(":8080", nil)
 	if err != nil {
 		fmt.Println("Error starting server:", err)
 	}

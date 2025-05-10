@@ -19,7 +19,11 @@ export default function Home() {
             const url = "https://deploy.egeuysal.com/highlight"
 
             try {
-                const res = await fetch(url)
+                const res = await fetch(url, {
+                    headers: {
+                        Authorization: `Bearer ${process.env.NEXT_PUBLIC_HIGHLIGHT_API_KEY}`,
+                    },
+                })
                 if (!res.ok) throw new Error("Error fetching highlights.")
 
                 const json = await res.json()
