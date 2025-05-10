@@ -35,7 +35,7 @@ export default function Home() {
     return (
       <main className="grid place-items-center h-screen w-screen">
         <section className="w-[90vw] grid gap-4">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Mood Tracker</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Moods</h1>
           {highlights.length > 0 ? (
             <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {highlights.map((highlight) => (

@@ -47,8 +47,9 @@ export default function NewHighlightPage() {
 
     return (
         <main className="grid place-items-center h-screen w-screen">
-            <section className="grid gap-4 w-[90vw] max-w-xl">
-                <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-6 space-y-4">
+            <section className="grid gap-4 w-[90vw]">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Add Your Mood</h1>
+                <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-4">
                     <input
                         name="text"
                         placeholder="Highlight text"
@@ -85,7 +86,7 @@ export default function NewHighlightPage() {
                         <option value={4}>😄 High</option>
                         <option value={5}>🔥 Very High</option>
                     </select>
-                    <button type="submit" className="w-full p-2.5 border border-neutral-800 rounded-lg">
+                    <button type="submit" className="w-full p-2.5 border border-neutral-800 rounded-lg md:col-span-2">
                         Submit Highlight
                     </button>
                 </form>

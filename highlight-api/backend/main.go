@@ -29,6 +29,34 @@ var highlights = []Highlight{
 		Category: []string{"go", "backend"},
 		Date:     "2025-05-11",
 	},
+	{
+		ID:       3,
+		Text:     "Felt stuck debugging a routing issue.",
+		Mood:     2,
+		Category: []string{"debugging", "frustration"},
+		Date:     "2025-05-12",
+	},
+	{
+		ID:       4,
+		Text:     "Had a breakthrough with Docker containers.",
+		Mood:     5,
+		Category: []string{"docker", "deployment"},
+		Date:     "2025-05-13",
+	},
+	{
+		ID:       5,
+		Text:     "Struggled with Go error handling patterns.",
+		Mood:     3,
+		Category: []string{"go", "learning"},
+		Date:     "2025-05-14",
+	},
+	{
+		ID:       6,
+		Text:     "Successfully connected frontend to Go API!",
+		Mood:     5,
+		Category: []string{"fullstack", "milestone"},
+		Date:     "2025-05-15",
+	},
 }
 
 func handleHighlight(w http.ResponseWriter, r *http.Request) {

@@ -29,10 +29,9 @@ const moodChecker = (mood: number) => {
 export const Card: React.FC<Highlight> = ({ text, mood, category, date }) => {
     return (
         <section className="p-4 rounded-lg border border-neutral-800 w-full">
-            <h6 className="font-bold text-lg">{text}</h6>
-            <p className="text-sm text-gray-400">Mood: {moodChecker(mood)}</p>
-            <p className="text-sm text-gray-400">Date: {date}</p>
-            <p className="text-sm text-gray-400">Category: {category.join(", ")}</p>
+            <h6 className="font-bold">{text}</h6>
+            <p className="opacity-50 text-sm">{date} &#8226; {category.join(", ")}</p>
+            <p>Mood: {moodChecker(mood)}</p>
         </section>
     )
 }
