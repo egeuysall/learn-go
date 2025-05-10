@@ -9,6 +9,8 @@ services:
     restart: always  # Ensures the container restarts automatically on failure or server reboot
     networks:
       - app-network
+    env_file:
+      - .env.local  # Loads environment variables from the .env.local file
 
 networks:
   app-network:
