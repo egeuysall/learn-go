@@ -16,7 +16,7 @@ export default function Home() {
 
     useEffect(() => {
         const fetchHighlights = async () => {
-            const url = "http://localhost:8080/highlight"
+            const url = "http://134.122.15.244:8080/"
 
             try {
                 const res = await fetch(url)

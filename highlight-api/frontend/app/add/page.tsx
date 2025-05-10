@@ -28,7 +28,7 @@ export default function NewHighlightPage() {
         }
 
         try {
-            const res = await fetch("http://localhost:8080/highlight", {
+            const res = await fetch("http://134.122.15.244:8080/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
