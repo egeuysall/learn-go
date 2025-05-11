@@ -1,1 +1,0 @@
-# Thank you for checking the file!
