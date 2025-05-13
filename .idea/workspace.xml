@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3e15eb5-0bae-436c-b13e-a42e2cf67f00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/loops.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advanced-functions.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maps.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pointers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slices.go" beforeDir="false" afterPath="$PROJECT_DIR$/slices.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
